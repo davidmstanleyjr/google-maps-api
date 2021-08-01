@@ -3,7 +3,28 @@
 
 body {
 	color: #5bc0de;
-	font-family: "Poppins", sans-serif;
+	font-family: "Chakra Petch", sans-serif;
+}
+
+.blue {
+	color: blue;
+}
+
+.red {
+	color: red;
+}
+
+.yellow {
+	color: yellow;
+}
+
+.green {
+	color: green;
+}
+
+.logo {
+	font-size: 40px;
+	text-align: center;
 }
 
 .fa-map-marker-alt,
