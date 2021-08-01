@@ -5,21 +5,18 @@ var mapOptions = {
 	mapTypeId: google.maps.MapTypeId.ROADMAP,
 };
 
-//create map
+//this creates the map
 var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
 
-//create a DirectionsService object to use the route method and get a result for our request
 var directionsService = new google.maps.DirectionsService();
 
-//create a DirectionsRenderer object which we will use to display the route
+//this displays  the route
 var directionsDisplay = new google.maps.DirectionsRenderer();
 
-//bind the DirectionsRenderer to the map
 directionsDisplay.setMap(map);
 
 //define calcRoute function
 function calcRoute() {
-	//create request
 	var request = {
 		origin: document.getElementById("from").value,
 		destination: document.getElementById("to").value,
@@ -43,15 +40,14 @@ function calcRoute() {
 				result.routes[0].legs[0].duration.text +
 				".</div>";
 
-			//display route
+			//this displays the route
 			directionsDisplay.setDirections(result);
 		} else {
-			//delete route from map
+			//this delete route from map
 			directionsDisplay.setDirections({ routes: [] });
-			//center map in London
 			map.setCenter(myLatLng);
 
-			//show error message
+			//this shows the error message
 			output.innerHTML =
 				"<div class='alert-danger'><i class='fas fa-exclamation-triangle'></i> Could not retrieve driving distance.</div>";
 		}

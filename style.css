@@ -23,8 +23,11 @@ body {
 }
 
 .logo {
-	font-size: 40px;
+	font-size: 100px;
 	text-align: center;
+	font-weight: 900;
+	font-family: "Josefin Sans", sans-serif;
+	padding: -10px;
 }
 
 .fa-map-marker-alt,
